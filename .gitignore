@@ -1,0 +1,8 @@
+# SQLite database file
+passwords.db
+
+# IDE specific files (example for VSCode)
+.vscode/
+
+# OS specific files (example for macOS)
+.DS_Store 
