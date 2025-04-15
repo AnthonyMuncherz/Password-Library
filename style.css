@@ -17,6 +17,12 @@ body {
     width: 100%;
     max-width: 600px; /* Adjusted max-width for dashboard */
     text-align: center;
+    opacity: 0; /* Start hidden for fade-in */
+    transition: opacity 0.8s ease-in-out; /* Define the fade transition */
+}
+
+.container.fade-in {
+    opacity: 1; /* End state for fade-in */
 }
 
 h1 {

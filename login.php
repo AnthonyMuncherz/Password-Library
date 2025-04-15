@@ -11,10 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $message = 'Please fill in all fields.';
     } else {
         try {
-            // --- SECURITY FLAW 2: SQL Injection Vulnerability ---
-            // Directly inserting user input into the query without sanitization or prepared statements.
-            // An attacker can input something like: ' OR '1'='1 -- 
-            // Or use tools like sqlmap.
+
             $sql = "SELECT * FROM users WHERE username = '" . $username . "' AND password = '" . $password . "'"; // Plaintext password check
             
             // Using query() which is susceptible if the query string is built with raw user input
